@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'courses'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,9 @@ DATABASES = {
         "HOST": "127.0.0.1",
         "OPTIONS": {
             'init_command': "SET default_storage_engine=INNODB;"
-                            "SET sql_mode"
+                            "SET sql_mode=STRICT_TRANS_TABLES;"
+                            "SET GLOBAL group_concat_max_len=102400;"
+                            "SET charset utf8;"
         }
     }
 }
@@ -111,9 +114,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'zh-cn'
+LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'CN'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
