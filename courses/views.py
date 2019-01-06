@@ -8,6 +8,7 @@ from .models import AddressInfo
 
 class IndexView(View):
     def get(self, request):
+        # 1.
         return render(request, 'address.html')
 
 

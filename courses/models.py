@@ -39,7 +39,7 @@ class Course(models.Model):
     title = models.CharField(max_length=100, primary_key=True, db_index=True, verbose_name="课程名")
     teacher = models.ForeignKey(Teacher, null=True, blank=True, on_delete=models.CASCADE,
                                 verbose_name="课程讲师")  # 删除级联
-    type = models.CharField(choices=((1, "实战课"), (2, "免费课"), (0, "其它")), max_length=1,
+    type = models.PositiveIntegerField(choices=((1, "实战课"), (2, "免费课"), (0, "其它")), max_length=1,
                             default=0, verbose_name="课程类型")
     price = models.PositiveSmallIntegerField(verbose_name="价格")
     volume = models.BigIntegerField(verbose_name="销量")
