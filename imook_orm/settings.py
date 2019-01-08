@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "imooc",
-        "USER": "root",
-        "PASSWORD": "M26xt0741s!",
+        "USER": "xin",
+        "PASSWORD": "P@ss1234",
         "HOST": "127.0.0.1",
         "OPTIONS": {
             'init_command': "SET default_storage_engine=INNODB;"
